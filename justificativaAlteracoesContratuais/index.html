@@ -7,51 +7,129 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="container">
-        <!-- <img src="imagens/logo.jpg" alt="Logo prefeitura Rio Brilhante com texto 'Prefeitura Municipal de Rio Brilhante a Pequena Cativante'"> -->
-        <h1>Prefeitura Municipal de Rio Brilhante</h1>
+    <header id="cabecalho">
+        <img src="imagens/logo.png" alt="" class="itensCabecalho">
+        <p class="itensCabecalho">Estado do Mato Grosso do Sul</p>
+        <p class="itensCabecalho"><strong>Prefeitura Municipal de Rio Brilhante</strong></p>
+        <p class="itensCabecalho" id="idAPequena"><em>"A Pequena Cativante"</em></p>
     </header>
 
-    <main class="container">
-        <form action="" method="post" class="containerForms">
-           
-                <div>
-                    <label for="idContrato">Contrato nº: </label>
-                    <input type="number" name="" id="idContrato">
-                </div>
-                <div>
-                    <label for="idProcesso">Processo nº: </label>
-                    <input type="number" name="" id="idProcesso">
-                </div>
-                <div>
-                    <label for="idModalidade">Modalidade: </label>
-                    <input type="text" name="" id="idModalidade">
-                    <label for="idNumModal">Nº </label>
-                    <input type="number" name="" id="idNumModal">
-                </div>
-                <div>
-                    <label for="idObjeto">Objeto: </label>
-                    <input type="text" name="" id="idObjeto">
-                    
-                </div>
-                <div>
-                    <label for="idContratante">Contratante: </label>
-                    <input type="text" name="" id="idContratante">
-                    
-                </div>
-                <div>
-                    <label for="idCnpj">CNPJ: </label>
-                    <input type="text" name="" id="idCnpj">
-                    
-                </div>
-                <div>
-                    <label for="idSecretario">Secretário Municipal de: </label>
-                    <input type="text" name="" id="idSecretario">
-                </div>
-
-                <input type="submit" value="Gerar" onplay="">
-        </form>
-    </main>
+    <h2 id="tituloJustificativa"><strong>JUSTIFICATIVA</strong></h2>
     
+    <form>
+        <div class="form-group">
+            <label for="contrato">Contrato n.º:</label>
+            <input type="text" id="contrato" name="contrato" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="processo">Processo Administrativo n.º:</label>
+            <input type="text" id="processo" name="processo" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="modalidade">Modalidade:</label>
+            <input type="text" id="modalidade" name="modalidade" style="border-right: 1px solid #000000;" required>
+            
+            <label for="modalidadeNumero" style="width: 50px; text-align: center;">N.º</label>
+            <input type="text" id="modalidadeNumero" name="modalidadeNumero" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="objeto">Objeto:</label>
+            <input type="text" id="objeto" name="objeto" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="contratada">Contratada:</label>
+            <input type="text" id="contratada" name="contratada" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" id="cnpj" name="cnpj" required>
+        </div>
+    </form>
+
+
+    <form id="TextoFormulario">
+        
+        <input type="button" value="Deixar em Branco X" id="btnDeixarEmBranco" style="align-self: flex-end;">
+        <p class="txtJustificativa">
+            Justifica-se a solicitação de 
+            <input type="text" id="solicitacao" placeholder="Digite aqui..."> 
+            tendo em vista a necessidade de 
+            <input type="text" id="necessidade" placeholder="Digite aqui...">.
+        </p>
+        <p class="txtJustificativa">
+            A Lei n.º <input type="text" id="lei" placeholder="Digite o número da lei...">, 
+            em seu artigo <input type="text" id="artigo" placeholder="Digite o artigo...">, diz que 
+            <input type="text" id="conteudoLei" placeholder="Digite o conteúdo da lei...">.
+        </p>
+        <p class="txtJustificativa">
+            Além disso, o objeto do contrato é essencial para assegurar 
+            <input type="text" id="objetivo" placeholder="Digite o objetivo...">.
+        </p>
+        <!-- Adicione mais campos conforme necessário -->
+         <p class="txtJustificativa">
+            Destacamos que foi realizada a  <input type="text" id="conteudoFoiRealizada" placeholder="Digite aqui"> para verificar  <input type="text" id="conteudoVerificar" placeholder="Digite aqui">, sendo constatado que  <input type="text" id="conteudoContastado" placeholder="Digite aqui">.
+         </p>
+         <p class="txtJustificativa">
+            Note que tal solicitação visa a <input type="text" id="conteudoVisa" placeholder="Digite aqui">.
+         </p>
+         <p class="txtJustificativa">
+            Portanto, temos que a solicitação de <input type="text" id="conteudoNecessaria" placeholder="Digite aqui"> é necessária para a continuidade da execução do objeto contratado, conforme justificado acima.
+
+         </p>
+        
+    </form>
+
+    <footer id="containerRodape">
+        <p style="align-self: flex-end;">Rio Brilhante/MS, 17 de agosto de 2024.</p>
+        <br>
+        <form action="">
+            <input type="text" name="" id="" placeholder="Secretário Municipal de XXXXXXXXX" style="padding: 15px; text-align: center; margin-bottom: 45px;">
+
+            <button type="button" onclick="gerarTexto()" style="margin-bottom: 45px; padding: 10px; background-color: #525252;">Gerar Texto</button>
+
+        </form>
+
+        <p class="rodapeFinal" style="border-top: 1px solid black;">
+            <strong>Endereço:</strong> Rua Prefeito Athayde Nogueira, n.º 1033, Centro, Rio Brilhante/MS, CEP 79130-000
+        </p>
+        <p class="rodapeFinal">
+            <strong>Telefone:</strong> 0800 100 2609   –   <strong>Site:</strong> http://riobrilhante.ms.gov.br/
+        </p>
+    </footer>
+    
+    <script>
+        function gerarTexto() {
+            // Obter os valores dos campos do formulário
+            var solicitacao = document.getElementById('solicitacao').value;
+            var necessidade = document.getElementById('necessidade').value;
+            var lei = document.getElementById('lei').value;
+            var artigo = document.getElementById('artigo').value;
+            var conteudoLei = document.getElementById('conteudoLei').value;
+            var objetivo = document.getElementById('objetivo').value;
+            var conteudoFoiRealizada = document.getElementById('conteudoFoiRealizada').value;
+            var conteudoVerificar = document.getElementById('conteudoVerificar').value;
+            var conteudoContastado = document.getElementById('conteudoContastado').value;
+            var conteudoVisa = document.getElementById('conteudoVisa').value;
+            var conteudoNecessaria = document.getElementById('conteudoNecessaria').value;
+
+            // Gerar o texto
+            var textoGerado = `
+            Justifica-se a solicitação de ${solicitacao} tendo em vista a necessidade de ${necessidade}.
+            A Lei n.º ${lei}, em seu artigo ${artigo}, diz que ${conteudoLei}.
+            Além disso, o objeto do contrato é essencial para assegurar ${objetivo}.
+            Destacamos que foi realizada a ${conteudoFoiRealizada} para verificar ${conteudoVerificar}, sendo constatado que ${conteudoContastado}.
+            Note que tal solicitação visa a ${conteudoVisa}.
+            Portanto, temos que a solicitação de ${conteudoNecessaria} é necessária para a continuidade da execução do objeto contratado, conforme justificado acima.
+            `;
+
+            // Exibir o texto gerado (você pode modificar onde deseja exibir o texto)
+            alert(textoGerado);
+        }
+    </script>
 </body>
 </html>
