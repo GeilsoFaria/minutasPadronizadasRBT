@@ -1,32 +1,101 @@
 @charset "UTF-8";
 
-.container {
+#cabecalho{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: space-around;
-    margin-bottom: 50px;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+}
+img{
+    width: 100px;
+    height: 81px;
 }
 
-.containerForms{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-content: space-around;
-    border: 2px solid black;
-    /* width: 31vw; */
-    padding: 15px;
-    background-color: #d3d3d3;
-    border-radius: 5px;
+.itensCabecalho {
+    padding: 0px;
+    margin: 1px;
+    text-align: center;
 }
 
-div{
-    padding: 10px;
-    background-color: #8f8f8f;
-    margin: 3px;
-    border-radius: 5px;
+#idAPequena {
+    text-align: center;
+    width: 80vw;
+    padding-bottom: 3px;
+    border-bottom: 3px solid black;
 }
-input[type=submit]{
-    padding: 15px;
-    margin-top: 25px;
+
+#tituloJustificativa{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    text-decoration: underline solid black 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 10px; */
+    border: 1px solid #000000; 
+}
+
+.form-group label {
+    width: 200px;
+    margin-right: 10px;
+}
+
+.form-group input {
+    flex-grow: 1;
+    padding: 4px; 
+   
+}
+.form-group input[type="text"] {
+    width: 150px;
+    border-left: 1px solid black;
+    border-top: 0px solid white;
+    border-bottom: 0px solid white;
+    border-right: 0px solid white;
+}
+
+#TextoFormulario{
+    display: flex;
+    margin-top: 30px ;
+    margin-bottom: 30px;
+    background-color: #f5efef;
+    
+}
+#btnDeixarEmBranco {
+    width: 150px;   
+}
+
+#containerRodape {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.txtJustificativa{
+    text-align: justify;
+}
+.rodapeFinal{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    padding: 0px;
+    margin: 0px;
+
+}
+.txtJustificativa input {
+    padding: 5px;
+
 }
